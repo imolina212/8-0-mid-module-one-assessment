@@ -26,7 +26,19 @@ const animals = [
  * getTotalCount(animals); //> 28
  * getTotalCount([]); //> 0 // returns 0 if the input array is empty
  */
-function getTotalCount(animals) {}
+function getTotalCount(animals) {
+  //determine default value and ouput
+  let totalCount = 0;
+  //define loop
+  for (i = 0; i < animals.length; i++) {
+    let count = animals[i].count;
+    totalCount += count;
+  }
+  //accumulate!
+  return totalCount;
+}
+
+
 
 /**
  * FUNCTION DESCRIPTION
@@ -40,7 +52,17 @@ function getTotalCount(animals) {}
  * getAllKinds(animals); //> ["Pig", "Cow", "Chicken", "Horse", "Dog", "Cat"]
  * getAllKinds([]); //> [] // returns empty array if input array is empty
  */
-function getAllKinds(animals) {}
+function getAllKinds(animals) {
+  //determine default value and output
+  let animalKind = [];  
+  //define loop
+  for (let i = 0; i < animals.length; i++) {
+    let kindOfAnimal = animals[i].kind;
+    animalKind.push(kindOfAnimal);
+  }
+  //Accumulate!
+  return animalKind;
+}
 
 /**
  * FUNCTION DESCRIPTION
@@ -59,7 +81,24 @@ function getAllKinds(animals) {}
   ];
  * filterByCountMinimum([], 3); //> [] // returns empty array if input array is empty
  */
-function filterByCountMinimum(animals, minimum) {}
+function filterByCountMinimum(animals, minimum) {
+  //Determine default value and output
+let highCount = [];
+
+  //Define loop
+  for (let i = 0; i < animals.length; i++) {
+    // let count = animals.count
+    let animalCheck = animals[i];
+    if (animalCheck.count >= minimum) {
+
+      highCount.push(animalCheck);
+
+    }
+  } return highCount;
+
+  //Accummulate!
+    
+}
 
 /**
  * FUNCTION DESCRIPTION
@@ -73,7 +112,23 @@ function filterByCountMinimum(animals, minimum) {}
  * getMostCommonAnimal(animals); //> { kind: "Chicken", count: 11 }
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
-function getMostCommonAnimal(animals) {}
+function getMostCommonAnimal(animals) {
+
+
+  //Determine default value and output
+  let highestCount = {};
+  //Define loop
+  for (i = 0; i < animals.length; i++) {
+    let animalCount = animals[i]
+    if (animalCount.count > animals.count) {
+        highestCount.push(animals.count);
+
+    }
+
+  }
+  //Accumulate!
+  return highestCount;
+ }
 
 // Do not change anything below this line.
 module.exports = {
